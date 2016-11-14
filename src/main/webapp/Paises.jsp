@@ -25,7 +25,12 @@
 			<td><p>Idioma:</p></td>
 			<td>
 				<select name="Idioma" id="Idioma">
-					
+					<%  List<Idiomas> listAllIdiomas = new ArrayList<Idiomas>();
+						listAllIdiomas = Sql.listarIdiomas(); 
+						for (int i=0;i<listAllIdiomas.size();i++){
+						   out.println("<option value ='"+listAllIdiomas.get(i).getIdiomas()+"'>"+listAllIdiomas.get(i).getIdiomas()+"</option>");
+						}
+					%>
 				</select>
 			</td>
 		</tr>

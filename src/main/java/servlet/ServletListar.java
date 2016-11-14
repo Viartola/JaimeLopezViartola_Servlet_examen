@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Servlet3
  */
-public class Servlet3 extends HttpServlet {
+public class ServletListar extends HttpServlet {
 	List<Paises> listAllPaises = new ArrayList<Paises>();
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class servlet
  */
-public class Servlet extends HttpServlet {
+public class ServletInsertar extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -24,8 +24,13 @@ public class Servlet extends HttpServlet {
 		
 		Sql.crearTablaPaises();
 		Sql.crearTablaIdiomas();
-		Sql.insertarTablaIdiomas(nIdioma);
-		Sql.insertarTablaPaises(pais, nIdioma);
+		if(nIdioma == ""){
+			Sql.insertarTablaPaises(pais, idioma);
+		}
+		else{
+			Sql.insertarTablaIdiomas(nIdioma);
+			Sql.insertarTablaPaises(pais, nIdioma);
+		}
 
 		redirect(resp);
 		//super.doPost(req, resp);

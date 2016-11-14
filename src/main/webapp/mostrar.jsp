@@ -10,6 +10,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Mostrar</title>
+<style>
+	a{
+		text-decoration:none;
+		color:red;
+	}
+</style>
 </head>
 <body>
 
@@ -19,20 +25,24 @@
 </form>	
 <br>
 <br>
-<table border="1">
+<table>
 		<thead>
 			<tr>
 				<td>Pais</td>
+				<td></td>
 				<td>Idioma</td>
-				<td>Borrar</td>
+				<td></td>
+				<td align = "center">Borrar</td>
 			</tr>
 		</thead>
 		<tbody>
 			<c:forEach var="user1" items="${listAllPaises}">
 				<tr>
 					<td><c:out value="${user1.pais}"/> </td>
+					<td></td>
 					<td><c:out value="${user1.idioma}"/> </td>
-					<td><a name="user" href="Adios?user=${user1.idioma}">Borrar</a></td>
+					<td></td>
+					<td><a name="user" href="Adios?user=${user1.idioma}">Borrar Idioma</a></td>
 		    	</tr>
 			</c:forEach>
 		</tbody>

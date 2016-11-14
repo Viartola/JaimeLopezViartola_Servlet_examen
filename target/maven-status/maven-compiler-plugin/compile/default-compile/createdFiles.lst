@@ -1,6 +1,7 @@
-servlet/Servlet4.class
 servlet/Sql.class
-servlet/Servlet2.class
+servlet/ServletInsertar.class
+servlet/ServletConfirmacion.class
+servlet/ServletBorrar.class
+servlet/ServletListar.class
 servlet/Paises.class
-servlet/Servlet.class
-servlet/Servlet3.class
+servlet/Idiomas.class
