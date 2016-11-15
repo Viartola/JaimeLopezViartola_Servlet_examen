@@ -42,7 +42,7 @@
 			<td colspan="2" align="right"><input type="submit" value="Enviar"></td>
 		</tr>
 		<tr>
-			<td colspan="2" align="left"><input type="button" onclick="window.location.href='mostrar.jsp'"  value="Mostrar Paises"></td>
+			<td colspan="2" align="left"><input type="button" onclick="window.location.href='Mostrar.jsp'"  value="Mostrar Paises"></td>
 		</tr>
 	</table>
 </form>

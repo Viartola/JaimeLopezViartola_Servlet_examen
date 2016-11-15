@@ -24,7 +24,7 @@ public class ServletListar extends HttpServlet {
 	}
 
 	private void redirect(HttpServletRequest req,HttpServletResponse resp) throws IOException, ServletException {
-		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/mostrar.jsp");
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Mostrar.jsp");
 		dispatcher.forward(req,resp);
 		//resp.sendRedirect("borrar.jsp");
 	}

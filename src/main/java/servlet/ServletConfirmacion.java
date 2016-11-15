@@ -18,7 +18,7 @@ public class ServletConfirmacion extends HttpServlet{
 		//System.out.println(user);
 		req.setAttribute("id",idioma);
 
-		req.getRequestDispatcher("aviso.jsp").forward(req, resp);
+		req.getRequestDispatcher("Aviso.jsp").forward(req, resp);
 		
 	}
 }
