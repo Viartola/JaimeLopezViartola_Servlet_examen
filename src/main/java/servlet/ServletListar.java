@@ -10,22 +10,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class Servlet3
- */
+import model.*;
+import service.*;
+
 public class ServletListar extends HttpServlet {
 	List<Paises> listAllPaises = new ArrayList<Paises>();
+	private Service servicio = new Service();
+	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		listAllPaises = Sql.listar();
+		listAllPaises = servicio.listarPaises();
 		req.setAttribute("listAllPaises", listAllPaises);
 		redirect(req,resp);
-		super.doPost(req, resp);
 	}
 
 	private void redirect(HttpServletRequest req,HttpServletResponse resp) throws IOException, ServletException {
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Mostrar.jsp");
 		dispatcher.forward(req,resp);
-		//resp.sendRedirect("borrar.jsp");
 	}
 }

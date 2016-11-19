@@ -4,16 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="refresh" content="5;url=Paises.jsp" />
 <title>Insert title here</title>
 </head>
 <body>
-<center><h1>EL REGISTRO VA HA SER ELIMINADO</h1>
-<form method="post" action="Hola">
-		<input type="hidden" value="${id}" name="user">
+<center><h1>AL BORRAR UN IDIOMA SERAN ELIMINADOS TODOS LOS PAISES QUE TENGAN EL MISMO IDIOMA</h1>
+<form method="post" action="Borrar">
+		<input type="hidden" value="${idioma}" name="user">
 		<br>
 		<input type="submit"  value="SI, estoy seguro">
-		<input type="button" onclick="window.location.href='Paises.jsp'"  value="NO, quiero eliminarlo">
+		<input type="button" onclick="window.location.href='index.jsp'"  value="NO, quiero eliminarlo">
 	</form>	
 </center>
 </body>

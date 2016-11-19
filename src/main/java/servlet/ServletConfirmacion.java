@@ -14,11 +14,9 @@ import javax.servlet.http.HttpServletResponse;
 public class ServletConfirmacion extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String idioma = req.getParameter("user");
-		//System.out.println(user);
-		req.setAttribute("id",idioma);
+		String idioma = req.getParameter("idioma");
+		req.setAttribute("idioma",idioma);
 
 		req.getRequestDispatcher("Aviso.jsp").forward(req, resp);
-		
 	}
 }

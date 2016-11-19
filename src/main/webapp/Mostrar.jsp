@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Mostrar</title>
+<title>Insertar</title>
 <style>
 	a{
 		text-decoration:none;
@@ -19,9 +19,9 @@
 </head>
 <body>
 
-<form method="post" action="Servlet3">	
+<form method="post" action="Listar">	
 		<input type="submit"  value="Mostrar">
-		<input type="button" onclick="window.location.href='Paises.jsp'"  value="Volver">
+		<input type="button" onclick="window.location.href='index.jsp'"  value="Volver">
 </form>	
 <br>
 <br>
@@ -42,7 +42,7 @@
 					<td></td>
 					<td><c:out value="${user1.idioma}"/> </td>
 					<td></td>
-					<td><a name="user" href="Adios?user=${user1.idioma}">Borrar Idioma</a></td>
+					<td><a name="user" href="Confirmacion?idioma=${user1.idioma}">Borrar Idioma</a></td>
 		    	</tr>
 			</c:forEach>
 		</tbody>

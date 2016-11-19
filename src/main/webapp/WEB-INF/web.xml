@@ -1,38 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4">
    <servlet>
-    <servlet-name>HelloServlet</servlet-name>
+    <servlet-name>ServletInsertar</servlet-name>
     <servlet-class>servlet.ServletInsertar</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>HelloServlet</servlet-name>
-    <url-pattern>/hello</url-pattern>
+    <servlet-name>ServletInsertar</servlet-name>
+    <url-pattern>/Insertar</url-pattern>
   </servlet-mapping>
+  
   <servlet>
-    <servlet-name>Servlet2</servlet-name>
+    <servlet-name>ServletBorrar</servlet-name>
     <servlet-class>servlet.ServletBorrar</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Servlet2</servlet-name>
-    <url-pattern>/Hola</url-pattern>
+    <servlet-name>ServletBorrar</servlet-name>
+    <url-pattern>/Borrar</url-pattern>
   </servlet-mapping>
+  
   <servlet>
-    <servlet-name>Servlet3</servlet-name>
+    <servlet-name>ServletListar</servlet-name>
     <servlet-class>servlet.ServletListar</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Servlet3</servlet-name>
-    <url-pattern>/Servlet3</url-pattern>
+    <servlet-name>ServletListar</servlet-name>
+    <url-pattern>/Listar</url-pattern>
   </servlet-mapping>
+  
   <servlet>
-    <servlet-name>Servlet4</servlet-name>
+    <servlet-name>ServletConfirmacion</servlet-name>
     <servlet-class>servlet.ServletConfirmacion</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Servlet4</servlet-name>
-    <url-pattern>/Adios</url-pattern>
+    <servlet-name>ServletConfirmacion</servlet-name>
+    <url-pattern>/Confirmacion</url-pattern>
   </servlet-mapping>
+  
   <welcome-file-list>
-    <welcome-file>Paises.jsp</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
 </web-app>

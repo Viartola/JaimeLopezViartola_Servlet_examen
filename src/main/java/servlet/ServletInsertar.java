@@ -11,10 +11,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import repository.*;
+import service.*;
+
 /**
  * Servlet implementation class servlet
  */
 public class ServletInsertar extends HttpServlet {
+	private Service servicio = new Service();
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -22,21 +26,19 @@ public class ServletInsertar extends HttpServlet {
 		String idioma = req.getParameter("Idioma");
 		String nIdioma = req.getParameter("nuevoIdioma");
 		
-		Sql.crearTablaPaises();
-		Sql.crearTablaIdiomas();
+		servicio.crearTablas();
+		
 		if(nIdioma == ""){
-			Sql.insertarTablaPaises(pais, idioma);
+			servicio.insertarPais(idioma, pais);
 		}
 		else{
-			Sql.insertarTablaIdiomas(nIdioma);
-			Sql.insertarTablaPaises(pais, nIdioma);
+			servicio.insertarNuevoIdioma(nIdioma, pais);
 		}
 
 		redirect(resp);
-		//super.doPost(req, resp);
 	}
 	
 	private void redirect(HttpServletResponse resp) throws IOException {
-		resp.sendRedirect("Paises.jsp");
+		resp.sendRedirect("index.jsp");
 	}
 }
