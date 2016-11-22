@@ -13,7 +13,7 @@ import java.util.List;
 
 import model.*;
 
-public class Sql {
+public class Repository {
 static File archivo = Paths.get(".").toAbsolutePath().normalize().toFile();
 static String ruta = archivo.toString() + "/src/main/resources/";
 

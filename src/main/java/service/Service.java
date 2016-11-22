@@ -6,7 +6,7 @@ import model.*;
 import repository.*;
 
 public class Service {
-	private Sql repository = new Sql();
+	private Repository repository = new Repository();
 	
 	public void insertarNuevoIdioma(String nIdioma, String pais) {
 		repository.insertarTablaIdiomas(nIdioma);
@@ -34,11 +34,11 @@ public class Service {
 		return repository.listarIdiomas();
 	}
 
-	public Sql getRepository() {
+	public Repository getRepository() {
 		return repository;
 	}
 
-	public void setRepository(Sql repository) {
+	public void setRepository(Repository repository) {
 		this.repository = repository;
 	}
 	
