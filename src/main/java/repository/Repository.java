@@ -151,7 +151,7 @@ static final String PASS = "";
 		}
 	}
     
-   public void insertarTablaPaises(String pais, String Idioma){
+   public void insertarTablaPaises(String pais, String idioma){
     	Connection conn = null;
         Statement stmt = null;
 
@@ -162,7 +162,7 @@ static final String PASS = "";
 		  
 		    stmt = conn.createStatement();
 		
-		    String sql = "REPLACE INTO Paises (pais,idiomaPaises) VALUES ('" + pais + "', '" + Idioma + "')";
+		    String sql = "REPLACE INTO Paises (pais,idiomaPaises) VALUES ('" + pais + "', '" + idioma + "')";
                    
             stmt.executeUpdate(sql);
         } catch (SQLException se) {            
