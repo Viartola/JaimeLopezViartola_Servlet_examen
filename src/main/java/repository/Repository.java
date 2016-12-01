@@ -151,7 +151,7 @@ static final String PASS = "";
 		}
 	}
     
-   public void insertarTablaPaises(String pais, String Idioma){
+   public void insertarTablaPaises(String pais, String idioma){
     	Connection conn = null;
         Statement stmt = null;
 
