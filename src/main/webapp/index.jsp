@@ -26,10 +26,10 @@
 			<td>
 				<select name="Idioma" id="Idioma">
 					<%  
-						Service servicio = new Service();
-						List<Idiomas> listAllIdiomas = servicio.listarIdiomas(); 
-						for (int i=0;i<listAllIdiomas.size();i++){
-						   out.println("<option value ='"+listAllIdiomas.get(i).getIdiomas()+"'>"+listAllIdiomas.get(i).getIdiomas()+"</option>");
+						Service service = new Service();
+						List<Idiomas> listAllLanguages = service.listAllLanguages(); 
+						for (Idiomas language: listAllLanguages){
+						   out.println("<option value ='"+language.getLanguage()+"'>"+language.getLanguage()+"</option>");
 						}
 					%>
 				</select>
