@@ -19,7 +19,7 @@
 </head>
 <body>
 
-<form method="post" action="Listar">	
+<form method="post" action="List">	
 		<input type="submit"  value="Mostrar">
 		<input type="button" onclick="window.location.href='index.jsp'"  value="Volver">
 </form>	
@@ -42,7 +42,7 @@
 					<td></td>
 					<td><c:out value="${country.language}"/> </td>
 					<td></td>
-					<td><a name="user" href="Confirmacion?language=${country.language}">Borrar Idioma</a></td>
+					<td><a name="user" href="Confirmation?language=${country.language}">Borrar Idioma</a></td>
 		    	</tr>
 			</c:forEach>
 		</tbody>
