@@ -160,7 +160,7 @@ public class Repository {
             closeRs(resultSet);
         } 
         return listAllLanguages;
-   }
+	}
 
 	private void closeRs(ResultSet resultSet) {
 		if(
@@ -174,44 +174,44 @@ public class Repository {
 		}
 	}
     
-   public void insertNewCountry(String country, String language){
-    	Connection conn = null;
-        Statement stmt = null;
-
-        try {
-            Class.forName("org.h2.Driver");
-
-		    conn = DriverManager.getConnection(DB_URL, USER, PASS);
-		  
-		    stmt = conn.createStatement();
-		
-		    String sql = "REPLACE INTO Countries (country,language) VALUES ('" + country + "', '" + language + "')";
-                   
-            stmt.executeUpdate(sql);
-        } catch (SQLException se) {            
-            se.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            closeStm(conn, stmt);
-            closeCon(conn);
-        } 
-    }
+	public void insertNewCountry(String country, String language){
+	    	Connection conn = null;
+	        Statement stmt = null;
+	
+	        try {
+	            Class.forName("org.h2.Driver");
+	
+			    conn = DriverManager.getConnection(DB_URL, USER, PASS);
+			  
+			    stmt = conn.createStatement();
+			
+			    String sql = "REPLACE INTO Countries (country,language) VALUES ('" + country + "', '" + language + "')";
+	               
+	        stmt.executeUpdate(sql);
+	    } catch (SQLException se) {            
+	        se.printStackTrace();
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    } finally {
+	        closeStm(conn, stmt);
+	        closeCon(conn);
+	    } 
+	}
    
-   public  void insertNewLanguage(String language){
+	public  void insertNewLanguage(String language){
 	   Connection conn = null;
-       Statement stmt = null;
-
-       try {
-           Class.forName("org.h2.Driver");
-
+	   Statement stmt = null;
+	
+	   try {
+	       Class.forName("org.h2.Driver");
+	
 		   conn = DriverManager.getConnection(DB_URL, USER, PASS);
 		 
 		   stmt = conn.createStatement();
 		
 		   String sql = "REPLACE INTO Languages (language) VALUES ('" + language + "')";
-                  
-           stmt.executeUpdate(sql);
+	                  
+	           stmt.executeUpdate(sql);
        } catch (SQLException se) {            
            se.printStackTrace();
        } catch (Exception e) {
@@ -220,9 +220,9 @@ public class Repository {
            closeStm(conn, stmt);
            closeCon(conn);
        } 
-   }
+	}
    
-   public void createLanguagesTable(){
+	public void createLanguagesTable(){
 	   Connection conn = null;
        Statement stmt = null;
 
@@ -247,7 +247,7 @@ public class Repository {
 	}
 
    
-   public void createCountriesTable(){
+	public void createCountriesTable(){
 	   Connection conn = null;
 	   Statement stmt = null;
 	
@@ -269,5 +269,5 @@ public class Repository {
 		   closeStm(conn, stmt);
 	       closeCon(conn);
 	   } 
-   }  
+	}  
 }
