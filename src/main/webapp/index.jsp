@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Datos</title>
+<title>Insertar Paises</title>
 </head>
 <body>
 <form method="post" action="Insertar">
@@ -18,17 +18,17 @@
 		</tr>
 		<tr>
 			<td><p>Pais:</p></td>
-			<td><input type="text" id="pais" name="pais" size="30"></td>
+			<td><input type="text" id="country" name="country" size="30"></td>
 		</tr>
 		
 		<tr>
 			<td><p>Idioma:</p></td>
 			<td>
-				<select name="Idioma" id="Idioma">
+				<select name="language" id="language">
 					<%  
 						Service service = new Service();
-						List<Idiomas> listAllLanguages = service.listAllLanguages(); 
-						for (Idiomas language: listAllLanguages){
+						List<Language> listAllLanguages = service.listAllLanguages(); 
+						for (Language language: listAllLanguages){
 						   out.println("<option value ='"+language.getLanguage()+"'>"+language.getLanguage()+"</option>");
 						}
 					%>
@@ -37,13 +37,13 @@
 		</tr>
 		<tr>
 			<td><p>Insertar nuevo Idioma:</p></td>
-			<td><input type="text" id="nuevoIdioma" name="nuevoIdioma" size="30"></td>
+			<td><input type="text" id="newLanguage" name="newLanguage" size="30"></td>
 		</tr>
 		<tr>
 			<td colspan="2" align="right"><input type="submit" value="Enviar"></td>
 		</tr>
 		<tr>
-			<td colspan="2" align="left"><input type="button" onclick="window.location.href='Mostrar.jsp'"  value="Mostrar Paises"></td>
+			<td colspan="2" align="left"><input type="button" onclick="window.location.href='ShowCountries.jsp'"  value="Mostrar Paises"></td>
 		</tr>
 	</table>
 </form>

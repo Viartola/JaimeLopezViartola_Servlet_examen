@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insertar</title>
+<title>Mostrar Paises</title>
 <style>
 	a{
 		text-decoration:none;
@@ -36,13 +36,13 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="language" items="${listAllCountries}">
+			<c:forEach var="country" items="${listAllCountries}">
 				<tr>
-					<td><c:out value="${language.country}"/> </td>
+					<td><c:out value="${country.country}"/> </td>
 					<td></td>
-					<td><c:out value="${language.language}"/> </td>
+					<td><c:out value="${country.language}"/> </td>
 					<td></td>
-					<td><a name="user" href="Confirmacion?idioma=${user1.idioma}">Borrar Idioma</a></td>
+					<td><a name="user" href="Confirmacion?language=${country.language}">Borrar Idioma</a></td>
 		    	</tr>
 			</c:forEach>
 		</tbody>
